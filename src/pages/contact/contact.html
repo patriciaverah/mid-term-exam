@@ -1,0 +1,67 @@
+<!--
+ *  App developed for the mid-term exam in "Introduction to Mobile App
+ *  Design and Development" course @Laurea.
+ *  Author: Patricia Vera Hernández
+ *  Student number: 1106727
+-->
+<ion-header>
+  <ion-navbar>
+    <ion-buttons start>
+      <button ion-button menuToggle>
+        <ion-icon name="menu"></ion-icon>
+      </button>
+    </ion-buttons>
+
+    <ion-title>Contact me</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<!--
+  Contact information
+  No actual functionality, only informative page
+-->
+<ion-content padding>
+  <!-- Personal information -->
+  <h6 id="personalinfo"> <b>Done by:</b> Patricia Vera Hernández <br>
+  <b>Student number @ Laurea:</b> 110727</h6>
+
+  <br> <p style="font-size: 15px;"> Contact info: </p>
+  <!--
+    List with contact information
+    Every item can be clicked to either show an alert or
+      open a new web page in the system browser
+  -->
+  <ion-list id="contactinfo-list">
+
+    <ion-item (click)="showEmail()">
+      <!-- Item icon -->
+      <ion-icon name="at" item-start></ion-icon>
+      E-mail
+    </ion-item>
+
+    <ion-item (click)="showPhone()">
+      <!-- Item icon -->
+      <ion-icon name="call" item-start></ion-icon>
+      Phone number
+    </ion-item>
+
+    <ion-item (click)="openWebPage('https://www.linkedin.com/in/patricia-vera-hern%C3%A1ndez-495b34157/?locale=en_US')">
+      <!-- Item icon -->
+      <ion-icon name="link" item-start></ion-icon>
+      Linkedin
+    </ion-item>
+
+    <ion-item (click)="openWebPage('https://www.flickr.com/photos/patriciaverah/')">
+      <!-- Item icon -->
+      <ion-icon name="photos" item-start></ion-icon>
+      Flickr
+    </ion-item>
+
+    <ion-item (click)="openWebPage('https://www.instagram.com/pxttv/')">
+      <!-- Item icon -->
+      <ion-icon name="camera" item-start></ion-icon>
+      Instagram
+    </ion-item>
+
+  </ion-list>
+</ion-content>

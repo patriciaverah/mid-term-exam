@@ -1,0 +1,89 @@
+<!--
+ *  App developed for the mid-term exam in "Introduction to Mobile App
+ *  Design and Development" course @Laurea.
+ *  Author: Patricia Vera Hernández
+ *  Student number: 1106727
+-->
+<ion-header>
+  <ion-navbar>
+    <ion-buttons start>
+      <button ion-button menuToggle>
+        <ion-icon name="menu"></ion-icon>
+      </button>
+    </ion-buttons>
+
+    <ion-title>Additional information</ion-title>
+  </ion-navbar>
+
+  <!--
+    Segments dividing the page into three sections
+  -->
+  <ion-toolbar>
+    <ion-segment [(ngModel)]="additional">
+      <ion-segment-button value="competences">
+        Competences
+      </ion-segment-button>
+
+      <ion-segment-button value="interests">
+        Interests
+      </ion-segment-button>
+
+      <ion-segment-button value="skills">
+        Skills
+      </ion-segment-button>
+    </ion-segment>
+  </ion-toolbar>
+</ion-header>
+
+
+<ion-content>
+  <div [ngSwitch]="additional">
+
+    <!--
+      List of competences - only some of the coding languages are shown
+        and it says the design tools I have a bit of experience with
+    -->
+    <ion-list *ngSwitchCase="'competences'">
+      <ion-item-group>
+        <ion-item-divider color="primary"> CODING </ion-item-divider>
+        <ion-item> Python </ion-item>
+        <ion-item> Java </ion-item>
+        <ion-item> Matlab </ion-item>
+        <ion-item> PHP </ion-item>
+        <ion-item> HTML </ion-item>
+        <ion-item> C </ion-item>
+        <ion-item> Android </ion-item>
+        <ion-item> JavaScript </ion-item>
+        <ion-item> SQL </ion-item>
+      </ion-item-group>
+      <ion-item-group>
+        <ion-item-divider color="primary"> DESIGN </ion-item-divider>
+        <ion-item> Photoshop </ion-item>
+        <ion-item> After Effects </ion-item>
+    </ion-item-group>
+    </ion-list>
+
+    <!--
+      List of interests - some of my interests
+    -->
+    <ion-list *ngSwitchCase="'interests'">
+      <ion-item> Reading </ion-item>
+      <ion-item> Photography </ion-item>
+      <ion-item> Music </ion-item>
+      <ion-item> Traveling </ion-item>
+      <ion-item> Art & Design </ion-item>
+      <ion-item> Social Media </ion-item>
+    </ion-list>
+
+    <!--
+      List of skills - some of my skills
+    -->
+    <ion-list *ngSwitchCase="'skills'">
+      <ion-item> Team work </ion-item>
+      <ion-item> Willing to learn new things </ion-item>
+      <ion-item> Organized </ion-item>
+      <ion-item> Hard working </ion-item>
+    </ion-list>
+
+  </div>
+</ion-content>
