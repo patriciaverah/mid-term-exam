@@ -5,47 +5,107 @@
  *  Student number: 1106727
 -->
 <ion-header>
-  <ion-navbar>
+  <ion-navbar color="primary">
     <ion-buttons start>
       <button ion-button menuToggle>
-        <ion-icon name="menu"></ion-icon>
-      </button>
+        <ion-icon color="dark" name="menu"></ion-icon>
+      </button> 
     </ion-buttons>
 
     <ion-title>Project Work</ion-title>
   </ion-navbar>
+
+  <!--
+    Segments dividing the page into three sections
+  -->
+  <ion-toolbar color="primary-light2">
+    <ion-segment [(ngModel)]="projects">
+      <ion-segment-button value="team">
+        Team/Work projects
+      </ion-segment-button>
+  
+      <ion-segment-button value="personal">
+        Personal projects
+      </ion-segment-button>
+    </ion-segment>
+  </ion-toolbar>
 </ion-header>
 
 
-<ion-content>
-  <!--
-    List of project works I've worked in or I am currently working in
-    Cards: one image, title and explaining text.
-  -->
-  <ion-card>
-    <img src="https://pbs.twimg.com/profile_images/867326527897309186/IehwUmEs_400x400.jpg">
-    <ion-card-content>
-      <ion-card-title> Beprevent </ion-card-title>
-      <p> As I said, I've been part of a company as an intern, anf this was one of the projects I worked in. <br>
-        In this project, I was meant to set the online shop and do some interface changes. </p>
-    </ion-card-content>
-  </ion-card>
+<ion-content style="background-color: #b1667c">
+  <div [ngSwitch]="projects" color="dark">
+    <!--
+      List of project works I've worked in or I am currently working in
+      Cards: one image, title and explaining text.
+    -->
+    <ion-list *ngSwitchCase="'team'">
+      <ion-card color="dark">
+        <img src="https://pbs.twimg.com/profile_images/867326527897309186/IehwUmEs_400x400.jpg">
+        <ion-card-content>
+          <ion-card-title style="color: #86414c"> Beprevent </ion-card-title>
+          <p class="description" style="color: #86414c"> As I said, I've been part of a company as an intern, anf this was one of the projects I worked in. <br>
+            In this project, I was meant to set the online shop and do some interface changes. </p>
+        </ion-card-content>
+      </ion-card>
 
-  <ion-card>
-    <img src="data:image/png;base64,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">
-    <ion-card-content>
-      <ion-card-title> Castrobus </ion-card-title>
-      <p> This was the second project I participated in during my internship. <br>
-        In this project, I was meant to implement the necessary in order to collect all the real-time data about the buses and arival times. After that, I had to display it on the web page in different ways and methods. </p>
-    </ion-card-content>
-  </ion-card>
+      <ion-card color="dark">
+        <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAALQAAACeCAMAAACsJNBQAAAADFBMVEX///8AAABlZWW/v78LHsbvAAAJT0lEQVR4nO1dibbkKghU+P9/fm0V4Jruu8Vkzgszc2+3cSkJEQTMpPTQQw899NCvSa8G8BPK+d+DrTlfDeE7JJJFtMiH4tP9Gf7CSVIwGyS3hi2B84X09TW+6OvSPUlfQPMadH59viW7X0xWPQJdpOaOqA3aGrQoSm5HFIIj0Lh8O9L3nL4naIjHsUzrPUED1uHqke/5IEL/VQFplAuK761hHtpH2vy8vVltqlqoRrhamE65qRZPND5SBW3QbSLXwfpAxOnYbQbNlQvpGACFQHtO88JRG5U908mT7ePyKoBIg679qVWzDKItmxSlusLz7xLf8Emz/8yYIH+q15WqZUwT7QDtOq8A1dCA2BjmN9RWEG072rGuSIvjxyTtXmwn6D+iHU/iewAmBuPfO4M+vNP6ptEG0O+G//tmZ4CW1/IRt/4Dx2qj1+KxGXQvntrDOXKB1aXRzZOpk42guw2KAZ9aTBCHPs4X6kEes04l0DoCWswyyyTf+0EvljOFGS0iw+72sMHZmL+kWjREV96tGu0sT6WvYMhxx79X+yw6YNzE/6PqBzfqXNCHjFKZisbqIm97OI2qbSnziB3uCaCMfXTdnCjVXTzCB2zHa3B3C0e3eHs7bXo8EXUV0diITKNV5skKsaE21VkdZ6dhnlGvSToJeFcxqv010INhGjA6QlsIvF+QZbVzF2pdwRFIaEO5ofFCbdZUOhXzcj34ktKbAPYm7pmYZxNvLvxEwyPYFp5Cs4JbFX6i5UTPQ73gqX5mtAT5TBfzPJHVb6C97OrXk2aeMda1D/qF5qcK9fGwjrCCjgcVxfqu9blm3kdeBfzqdCwpFJeCTrLyhUFjl0QDiXChVCzmNsV+RhetZYe3d36M6LEt4Fx9VGMKgm7e0tWOcldcY96YhpvZ/MDVYeAmVabLdwa9LRYzaQaC1ljMwsBzdguiGeXzPq0yUi+Z5k1H9KJckYCmLFQTkxn0zlCMDAN73EJjyesfRKPZU7MT9EI6tLj14P5ileKu6aKgyRIV9llK70CTqdTW2UGri3PRMtIGL67i9MJ2KMWMyOWYlrG4eGwa02NudxHoEuIsooElmkhTiIcnuC3NwV2IZ632klPPB/IMPBN0Aw2i5E/z3bDordRwAUwhLsw19uKCeQnKb3GJWfewF7Pd+YJKCNTY6yaFDKA3W9PLAZOD9iAtURcVGJLMthXdupONqNVBSxFYKZwuK4WK1CUjYbGO2hv3Wo56tbnFg2gXpUa/PYrE1fAI9I61euRTgC68nSNFijkIwwNDYGkTn4chJUALFy/BHxZVfr/WP6mgNfdqcQOnpeNR4BATE2NdyT0hj5Ppc4qKFcjQzcnUPohYoM330V4lY6EdX9htM1YfxGyhpF7CziQZxqKB5KDNInWDWi0tJYdW0Wae2wSk9y0m33T3oBtLXzw4ar/Vp9k/z+eCziNoywWq9kURDaGRQUOD+1yJfKXacBOrp72SP1zVGZniUgQwhE+m1I36ZIKcCToPoFspsWQUcdBd1MWkPEwPmbraBTo32V4559ih8EgON19R5oy2TjZqxbwg358UdVgpYf/dUJjXSzfrmaBX47nH7kPwqKt51Mk59IZJGLtlNX/VKIxX3L0LWG7zmngEJbhnm8aW9hDzuavHOKC64ujCs12LMWtQartN4jHf1ECdw+84P4B+LTBP8z9RPqp2HsRCbVfVxehrJF0szqKpaSjR0bnyUUPxTeiVqLNnASXf3NjaTa5S0UiDmbbUMi3gb0nDXm6d98HRlGKnZWolvjV6u4EX5lQ+93hoyyt6CepDNcW9FzPDjqw6J5OODU8hbW76RNrVmr+PdenhORtyjD+ngalbRCCYTt23aZnzLjZgPtAwnjdYc4MosiC/vmq4K4Cx1GmxsZ2dCHnIp78C81vUMsEI9i9bbfSq24Arnsmoxw8wy27M7jda3ume19IpwI7Des3h/cl+KoX9uWUvXVa9hFYu1E5Tx7ep5mWYV/LhRh13AVUWVm7LW4CepbyV4LHgKuqB6DSLDmNf+SaYUbRciyMwM07xAlr5iA5AN/uFa1GP+I4DnAer3n65XqCT1dIWt2HV4HrMRHFUvjY8torIUdajrBKrVsa300bUB4/bIb2pf61l+lPaJNjfzoh9T3tA/5Oc/ltWb8Kc/AxcTfH5KvN9Gantt2FuKRwXX4AdO/LrdgBGGnsmhy1dHCNcveHCuxxyTwevpnneWPPQQw899NA/QfrRbvlDs+b9e04tpv6VfjKdriX4LpbJmPg5KiSrwFr8yd/+j7H71F6ztDeP7iemwomPIZ5ckWI0tXCfZwKk1A2CwBgx2cEJYUI5U6FL8wj0IFc3q+KaIGLPVHpVxGrRwJrXa6VLBpZLqpWYQ9u4gKR7tYwWvEBU6FxVS6UsBWxHgBiosWZhziBDx3OkSiaSsG+yxyLIAI0IBZIa/ZAIGrw+8uyIXeNRDGNc5outNIICysHQVDkavZRogBLClcwDHcadeEeZMMPI+lHEjIVuWxNDApBknAaDCAbZYRlt8BbQeg2NHUxmjoq6GwqT5IgZb3mwIHBw2lhonZWaCL9LDSw4g8lpINCG05nvvHDQhWlIvER3hbFoICY86teyMy6PnGZCgrGb6XDqnJbaR4ZAZEzLOd3erDJXihWk02+L4MGUGAAvtlXlB2RkJvIaDRRnXfyaZuM2ZDdJRPYhZJm3I9tQfGjw+JTLQi5QTJUihAfIjlPx9ovJYRkg4VgbtoEEbLfNs+s8rqnCq9YAed5YhYTPuAfABW9usIQb5oPbmKiKdsm3CWwEbN7OhrL+r3TH/z+pcQj8C/R/3W1+b973cB9800W0zdvItUawPOFbWTqxAgrNJMujt+M4tBqQXc/qScxQ4om0aCSWFoSTMQrlJ9Rd1Sz6KeacoLCKqk6iZlAIlVnV10L1lMBMqDiox9JYqaZ5dhw6FKexuQj7iQd+MYWbq4nxU0b7P8lc7hO0Now4wbJvhoPlGmczFUzt8VbBDtFqASY7+KIOvAGd2fkvOZ0MAGyMxPOFxeahvlZPSx85DbbSOuLN8CKJUwRumgRo3lHV37qtsxnK+E8AAjsMAlrNZiDCThA75wm7gyYJNDVsP6WZzM2BWz8w8yjsbAMDrDna8zPqd0B2cO8r7Wr1WBnn/Ka+8BYr4kMPPfTQQ7+l/wBoiyvXnjIL3gAAAABJRU5ErkJggg==">
+        <ion-card-content>
+          <ion-card-title style="color: #86414c"> Castrobus </ion-card-title>
+          <p class="description" style="color: #86414c"> This was the second project I participated in during my internship. <br>
+            In this project, I was meant to implement the necessary in order to collect all the real-time data about the buses and arival times. After that, I had to display it on the web page in different ways and methods. </p>
+        </ion-card-content>
+      </ion-card>
 
-  <ion-card>
-    <img src="https://upload.wikimedia.org/wikipedia/commons/2/20/Photoshop_CC_icon.png">
-    <ion-card-content>
-      <ion-card-title> Photoshop edits </ion-card-title>
-      <p> I started retouching images with Photoshop not that much ago, but now I am constantly trying to improve myself with this tool. <br>
-        I've done some double exposures and some more edits that you can see in my Instagram and Flickr account, which you can access from the <b> contact page</b>. </p>
-    </ion-card-content>
-  </ion-card>
+      <ion-card color="dark">
+        <img src="https://neva125671182.files.wordpress.com/2018/01/android-studio1.jpg">
+        <ion-card-content>
+          <ion-card-title style="color: #86414c"> Android projects </ion-card-title>
+          <p class="description" style="color: #86414c"> During the years in my hometown university, we've learned how to develop Android applications. The main application that I've developed
+            using this programming language was a class assignment with one of my classmates. In this app we used MongoDB and geolocation. </p>
+        </ion-card-content>
+      </ion-card>
+
+      <ion-card color="dark">
+        <img src="https://www.computerhope.com/jargon/o/one-pass-compiler.jpg">
+        <ion-card-content>
+          <ion-card-title style="color: #86414c"> Compiler </ion-card-title>
+          <p class="description" style="color: #86414c"> During the last semester in my hometown university, we developed a compiler. The langage that it was supposed to compile was a variation of 
+            Pascal, so that it could be easier. We used Flex and Bison tools. We had to define the gramar and how the compiler had to work with the syntaxis. 
+            It was also developed with another one of my classmates for a university assignment.</p>
+        </ion-card-content>
+      </ion-card>
+    </ion-list>
+
+    <ion-list *ngSwitchCase="'personal'">
+      <ion-card color="dark">
+        <img src="https://pbs.twimg.com/profile_images/834457277830541312/bYMCvtHD_400x400.jpg">
+        <ion-card-content>
+          <ion-card-title style="color: #86414c"> Ionic </ion-card-title>
+          <p class="description" style="color: #86414c"> During this exchange semester, I've been learning how to design and develop applications making use of Ionic.
+            I had never use this tool before, and all the projects I've made with it are individual projects. That includes this application, the one called 
+            "Stay Safe" (that you can see in my GitHub profile) that I performed for the final part of the course and the rest of applications for practice. </p>
+        </ion-card-content>
+      </ion-card>
+
+      <ion-card color="dark">
+        <img src="https://cdn5.altiria.com/wp-content/uploads/2017/03/node-logo.jpg">
+        <ion-card-content>
+          <ion-card-title style="color: #86414c"> MEAN </ion-card-title>
+          <p class="description" style="color: #86414c"> Also during this exchange semester, I've been learning how to program using MEAN stak (MongoDB, Express.js, AngularJS and Node.js),
+            and pug instead of plain HTML files. With that development methods, I created a web page which is also my CV. It is less complete than this application, 
+            and worse designed but it can also work. </p>
+        </ion-card-content>
+      </ion-card>
+
+      <ion-card color="dark">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/2/20/Photoshop_CC_icon.png">
+        <ion-card-content>
+          <ion-card-title style="color: #86414c"> Photoshop edits </ion-card-title>
+          <p class="description" style="color: #86414c"> I started retouching images with Photoshop not that much ago, but now I am constantly trying to improve myself with this tool. <br>
+            I've done some double exposures and some more edits that you can see in my Instagram and Flickr account, which you can access from the <b> contact page</b>. </p>
+        </ion-card-content>
+      </ion-card>
+    </ion-list>
+  </div>
 </ion-content>

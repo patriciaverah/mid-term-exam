@@ -5,10 +5,10 @@
  *  Student number: 1106727
 -->
 <ion-header>
-  <ion-navbar>
+  <ion-navbar color="primary">
     <ion-buttons start>
       <button ion-button menuToggle>
-        <ion-icon name="menu"></ion-icon>
+        <ion-icon color="dark" name="menu"></ion-icon>
       </button>
     </ion-buttons>
 
@@ -20,12 +20,12 @@
   Contact information
   No actual functionality, only informative page
 -->
-<ion-content padding>
+<ion-content padding style="background-color: #222">
   <!-- Personal information -->
-  <h6 id="personalinfo"> <b>Done by:</b> Patricia Vera Hernández <br>
+  <h6 id="personalinfo" style="color: #86414c"> <b>Done by:</b> Patricia Vera Hernández <br>
   <b>Student number @ Laurea:</b> 110727</h6>
 
-  <br> <p style="font-size: 15px;"> Contact info: </p>
+  <br> <p style="font-size: 15px; color: #86414c"> Contact info: </p>
   <!--
     List with contact information
     Every item can be clicked to either show an alert or
@@ -33,34 +33,34 @@
   -->
   <ion-list id="contactinfo-list">
 
-    <ion-item (click)="showEmail()">
+    <ion-item (click)="showEmail()" color="dark" style="color: #86414c">
       <!-- Item icon -->
-      <ion-icon name="at" item-start></ion-icon>
-      E-mail
+      <ion-icon color="primary" name="at" item-start></ion-icon>
+      <b>E-mail</b>
     </ion-item>
 
-    <ion-item (click)="showPhone()">
+    <ion-item (click)="showPhone()" color="dark" style="color: #86414c">
       <!-- Item icon -->
-      <ion-icon name="call" item-start></ion-icon>
-      Phone number
+      <ion-icon color="primary" name="call" item-start></ion-icon>
+      <b>Phone number</b>
     </ion-item>
 
-    <ion-item (click)="openWebPage('https://www.linkedin.com/in/patricia-vera-hern%C3%A1ndez-495b34157/?locale=en_US')">
+    <ion-item (click)="openWebPage('https://www.linkedin.com/in/patricia-vera-hern%C3%A1ndez-495b34157/?locale=en_US')" style="color: #86414c" color="dark">
       <!-- Item icon -->
-      <ion-icon name="link" item-start></ion-icon>
-      Linkedin
+      <ion-icon color="primary" name="link" item-start></ion-icon>
+      <b>Linkedin</b>
     </ion-item>
 
-    <ion-item (click)="openWebPage('https://www.flickr.com/photos/patriciaverah/')">
+    <ion-item (click)="openWebPage('https://www.flickr.com/photos/patriciaverah/')" color="dark" style="color: #86414c">
       <!-- Item icon -->
-      <ion-icon name="photos" item-start></ion-icon>
-      Flickr
+      <ion-icon color="primary" name="photos" item-start></ion-icon>
+      <b>Flickr</b>
     </ion-item>
 
-    <ion-item (click)="openWebPage('https://www.instagram.com/pxttv/')">
+    <ion-item (click)="openWebPage('https://www.instagram.com/pxttv/')" color="dark" style="color: #86414c">
       <!-- Item icon -->
-      <ion-icon name="camera" item-start></ion-icon>
-      Instagram
+      <ion-icon color="primary" name="camera" item-start></ion-icon>
+      <b>Instagram</b>
     </ion-item>
 
   </ion-list>

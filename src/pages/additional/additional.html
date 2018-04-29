@@ -5,10 +5,10 @@
  *  Student number: 1106727
 -->
 <ion-header>
-  <ion-navbar>
+  <ion-navbar color="primary">
     <ion-buttons start>
       <button ion-button menuToggle>
-        <ion-icon name="menu"></ion-icon>
+        <ion-icon color="dark" name="menu"></ion-icon>
       </button>
     </ion-buttons>
 
@@ -18,7 +18,7 @@
   <!--
     Segments dividing the page into three sections
   -->
-  <ion-toolbar>
+  <ion-toolbar color="primary-light2">
     <ion-segment [(ngModel)]="additional">
       <ion-segment-button value="competences">
         Competences
@@ -36,30 +36,31 @@
 </ion-header>
 
 
-<ion-content>
+<ion-content style="background-color: #222">
   <div [ngSwitch]="additional">
 
     <!--
-      List of competences - only some of the coding languages are shown
-        and it says the design tools I have a bit of experience with
+      List of competences (technical skills) - only some of the coding languages 
+      are shown and it says the design tools I have a bit of experience with
     -->
     <ion-list *ngSwitchCase="'competences'">
       <ion-item-group>
-        <ion-item-divider color="primary"> CODING </ion-item-divider>
-        <ion-item> Python </ion-item>
-        <ion-item> Java </ion-item>
-        <ion-item> Matlab </ion-item>
-        <ion-item> PHP </ion-item>
-        <ion-item> HTML </ion-item>
-        <ion-item> C </ion-item>
-        <ion-item> Android </ion-item>
-        <ion-item> JavaScript </ion-item>
-        <ion-item> SQL </ion-item>
+        <ion-item-divider color="primary-light2"> CODING </ion-item-divider>
+        <ion-item color="dark" style="color: #86414c"> <b>Python</b> </ion-item>
+        <ion-item color="dark" style="color: #86414c"> <b>Java</b> </ion-item>
+        <ion-item color="dark" style="color: #86414c"> <b>Matlab</b> </ion-item>
+        <ion-item color="dark" style="color: #86414c"> <b>PHP</b> </ion-item>
+        <ion-item color="dark" style="color: #86414c"> <b>HTML</b> </ion-item>
+        <ion-item color="dark" style="color: #86414c"> <b>C</b> </ion-item>
+        <ion-item color="dark" style="color: #86414c"> <b>Android</b> </ion-item>
+        <ion-item color="dark" style="color: #86414c"> <b>JavaScript</b> </ion-item>
+        <ion-item color="dark" style="color: #86414c"> <b>SQL</b> </ion-item>
       </ion-item-group>
       <ion-item-group>
-        <ion-item-divider color="primary"> DESIGN </ion-item-divider>
-        <ion-item> Photoshop </ion-item>
-        <ion-item> After Effects </ion-item>
+        <ion-item-divider color="primary-light2"> DESIGN </ion-item-divider>
+        <ion-item color="dark" style="color: #86414c"> <b>Photoshop</b> </ion-item>
+        <ion-item color="dark" style="color: #86414c"> <b>After Effects</b> </ion-item>
+        <ion-item color="dark" style="color: #86414c"> <b>MarvelApp - App prototyping</b> </ion-item>
     </ion-item-group>
     </ion-list>
 
@@ -67,22 +68,22 @@
       List of interests - some of my interests
     -->
     <ion-list *ngSwitchCase="'interests'">
-      <ion-item> Reading </ion-item>
-      <ion-item> Photography </ion-item>
-      <ion-item> Music </ion-item>
-      <ion-item> Traveling </ion-item>
-      <ion-item> Art & Design </ion-item>
-      <ion-item> Social Media </ion-item>
+      <ion-item color="dark" style="color: #86414c"> <b>Reading</b> </ion-item>
+      <ion-item color="dark" style="color: #86414c"> <b>Photography</b> </ion-item>
+      <ion-item color="dark" style="color: #86414c"> <b>Music</b> </ion-item>
+      <ion-item color="dark" style="color: #86414c"> <b>Traveling</b> </ion-item>
+      <ion-item color="dark" style="color: #86414c"> <b>Art & Design</b> </ion-item>
+      <ion-item color="dark" style="color: #86414c"> <b>Social Media </b></ion-item>
     </ion-list>
 
     <!--
-      List of skills - some of my skills
+      List of skills - some of my soft skills
     -->
     <ion-list *ngSwitchCase="'skills'">
-      <ion-item> Team work </ion-item>
-      <ion-item> Willing to learn new things </ion-item>
-      <ion-item> Organized </ion-item>
-      <ion-item> Hard working </ion-item>
+      <ion-item color="dark" style="color: #86414c"> <b>Team work</b> </ion-item>
+      <ion-item color="dark" style="color: #86414c"> <b>Willing to learn new things</b> </ion-item>
+      <ion-item color="dark" style="color: #86414c"> <b>Organized</b> </ion-item>
+      <ion-item color="dark" style="color: #86414c"> <b>Hard working</b> </ion-item>
     </ion-list>
 
   </div>

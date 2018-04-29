@@ -1,20 +1,21 @@
 <!--
- *  App developed for the mid-term exam in "Introduction to Mobile App
+ *  App developed for the final exam in "Introduction to Mobile App
  *  Design and Development" course @Laurea.
  *  Author: Patricia Vera Hernández
  *  Student number: 1106727
 -->
+
 <ion-header>
   <!-- Menu button on the right corner added
        also the page title -->
-  <ion-navbar>
+  <ion-navbar color="primary">
     <ion-buttons start>
       <button ion-button menuToggle>
-        <ion-icon name="menu"></ion-icon>
+        <ion-icon color="dark" name="menu"></ion-icon>
       </button>
     </ion-buttons>
 
-    <ion-title>Welcome to my CV</ion-title>
+    <!-- <ion-title>Welcome to my CV</ion-title> -->
   </ion-navbar>
 </ion-header>
 
@@ -23,13 +24,18 @@
   about what the user will find in it.
   No actual functionality, only informative page
 -->
-<ion-content padding>
-  <h4>Welcome!</h4>
-  <p id="intromyself"> I am Patricia, an exchange student @ Laurea. <br>
-  I was born in October 1996 in Pamplona, Spain. Back in my city I am studying Computer Sience. </p>
+<ion-content class="bg-image no-scroll" padding style="background-color: #222;">
+  <div class="welcome-content">
+    <p class="welcome-title"> Welcome! </p>
 
-  <p id="introapp"> In this app you will be able to see <b> my CV </b>! <br>
-  You will also find some projects and activities I've participated in.</p>
+    <p class="intromyself" id="intromyself"> I am Patricia, an exchange student @ Laurea. <br>
+    I was born in October 1996 in Pamplona, Spain. <br> 
+    Back in my city I am studying <b>Computer Sience</b>, but now I'm doing my exchange semester here in 
+    Finland - <b>Business Information Technology</b> degree. </p>
 
-  <p id="introcontact"> There's also some contact information in case you are interested.</p>
+    <p class="introapp" id="introapp"> In this app you will be able to see <b> my CV</b>!
+    You will also find some projects and activities I've participated in.</p>
+
+    <p class="introcontact" id="introcontact"> There's also some contact information in case you are interested.</p>
+  </div>
 </ion-content>

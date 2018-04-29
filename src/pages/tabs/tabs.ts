@@ -10,7 +10,7 @@ import { IonicPage, NavController, NavParams } from 'ionic-angular';
 export class TabsPage {
 
   // Tabs available in the down part of the app
-  tab1Root="AboutPage";
+  tab1Root="ProfilePage";
   tab2Root="CvPage";
   tab3Root="ContactPage";
 

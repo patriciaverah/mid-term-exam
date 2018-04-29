@@ -1,46 +1,41 @@
 <!--
- *  App developed for the mid-term exam in "Introduction to Mobile App
+ *  App developed for the final exam in "Introduction to Mobile App
  *  Design and Development" course @Laurea.
  *  Author: Patricia Vera Hernández
  *  Student number: 1106727
 -->
 
-<!--
-  Login form
--->
-<ion-content class="login-content" padding>
-  <ion-row class="logo-row">
-    <ion-col></ion-col>
-    <ion-col width-67>
-      <ion-icon name="bulb" style="font-size: 60px;"></ion-icon>
-    </ion-col>
-    <ion-col></ion-col>
-  </ion-row>
-  <div class="login-box">
+<!-- CV's login page -->
+<ion-content class="bg-image no-scroll" style="background-color: #641a30;" padding >
+  <!-- App logo -->
+  <ion-icon name="bulb" style="zoom: 5.0; margin: 20% 20% 10% 37%;" color="primary-light2"></ion-icon>
+
+  <!-- Username and Password fields and labels -->
+  <div class="login-div">
     <form (ngSubmit)="login()" #registerForm="ngForm">
-      <ion-row>
-        <ion-col>
-          <ion-list inset>
+      <ion-list class="list" inset>
+        
+        <ion-item class="label">
+          <ion-label color="primary-light" style="font-size: 12px; font-family: Montserrat-Black;" stacked> Email </ion-label>
+          <ion-input color="light" type="text" name="email" placeholder="Enter e-mail" [(ngModel)]="registerCredentials.email" required> </ion-input>
+        </ion-item>
 
-            <ion-item>
-              <ion-input type="text" placeholder="Email" name="email" [(ngModel)]="registerCredentials.email" required></ion-input>
-            </ion-item>
+        <ion-item class="label">
+          <ion-label color="primary-light" style="font-size: 12px; font-family: Montserrat-Black;" stacked> Password </ion-label>
+          <ion-input color="light" type="password" name="password" placeholder="Enter password" [(ngModel)]="registerCredentials.password" required> </ion-input>
+        </ion-item>
+      
+      </ion-list>
 
-            <ion-item>
-              <ion-input type="password" placeholder="Password" name="password" [(ngModel)]="registerCredentials.password" required></ion-input>
-            </ion-item>
+      <p class="text" style="font-family: Montserrat-Black; font-size: 14px; color: #86414c;"> Forgot your password? </p>
 
-          </ion-list>
-        </ion-col>
-      </ion-row>
+      <div text-center>
+        <button class="btnWidth" ion-button color="dark" type="submit" [disabled]="!registerForm.form.valid"> Login </button>
+      </div>
 
-      <ion-row>
-        <ion-col class="signup-col">
-          <button ion-button class="submit-btn" full type="submit" [disabled]="!registerForm.form.valid">Login</button>
-          <button ion-button="" class="register-btn" full="" type="button" block="" clear="" (click)="createAccount()">Create New Account</button>
-        </ion-col>
-      </ion-row>
-
+      <div text-center>
+        <button class="myButton" ion-button color="dark" outline type="button" (click)="createAccount()"> Sign Up </button>
+      </div>
     </form>
   </div>
 </ion-content>

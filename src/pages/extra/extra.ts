@@ -1,5 +1,5 @@
 /*
- *  App developed for the mid-term exam in "Introduction to Mobile App
+ *  App developed for the final exam in "Introduction to Mobile App
  *  Design and Development" course @Laurea.
  *  Author: Patricia Vera Hernández
  *  Student number: 1106727

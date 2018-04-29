@@ -1,61 +1,60 @@
-/*
- *  App developed for the mid-term exam in "Introduction to Mobile App
- *  Design and Development" course @Laurea.
- *  Author: Patricia Vera Hernández
- *  Student number: 1106727
- */
- 
-page-login {
+  /*
+   *  App developed for the final exam in "Introduction to Mobile App
+   *  Design and Development" course @Laurea.
+   *  Author: Patricia Vera Hernández
+   *  Student number: 1106727
+   */
 
-    .login-content {
-      background: lightblue;
+   page-login {
 
-      .logo-row {
-        padding-top: 50px;
-        padding-bottom: 20px;
-      }
-
-      .login-box {
-        background: #295499;
-        padding: 20px 20px 0px 20px;
-        margin-top: 30px;
-      }
-
-      ion-row {
-         align-items: center;
-         text-align: center;
-       }
-
-       ion-item {
-           border-radius: 30px !important;
-           padding-left: 30px !important;
-           font-size: 0.9em;
-           margin-bottom: 10px;
-           border: 1px solid #ffffff;
-           border-bottom: 0px !important;
-           box-shadow: none !important;
-       }
-
-       .signup-col {
-         margin: 0px 16px 0px 16px;
-         padding-bottom: 20px;
-       }
-
-       .item-inner {
-         border-bottom-color: #ffffff !important;
-         box-shadow: none !important;
-       }
-
-       .submit-btn {
-         background: #366ec9;
-         border-radius: 30px !important;
-         border: 1px solid #ffffff;
-       }
-
-       .register-btn {
-         color: #ffffff;
-         font-size: 0.8em;
-       }
+    // Fixing the page with no scroll
+    .no-scroll .scroll-content {
+        overflow: hidden;
     }
 
-  }
+    // Logo scale
+    .logo {
+        display: block;
+        margin: auto;
+        width: 50%;
+        margin-top: 2vh;
+        margin: 20% 20% 10% 35%;
+    }
+
+    .label {
+        background-color: rgba(221, 53, 53, 0);
+    }
+
+    .text {
+        text-align: center;
+    }
+
+    .btnWidth {
+        width: 58%;
+    }
+
+    .myButton {
+        margin-top: 8vh;
+        width:74%;
+    }
+
+    .login-div {
+        margin-bottom: 8%;
+    }
+
+    .text-input:focus .text-input-md:focus {
+        color: whitesmoke;
+    }
+
+    .text-input::-moz-placeholder {
+        color: #b1667c;
+      }
+
+      .text-input:-ms-input-placeholder {
+        color: #b1667c;
+      }
+
+      .text-input::-webkit-input-placeholder {
+        color: #b1667c;
+      }
+}

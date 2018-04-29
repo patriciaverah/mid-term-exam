@@ -1,0 +1,45 @@
+<!--
+ *  App developed for the final exam in "Introduction to Mobile App
+ *  Design and Development" course @Laurea.
+ *  Author: Patricia Vera Hernández
+ *  Student number: 1106727
+-->
+
+<ion-slides pager padding style="background-color: #222">
+    <!-- This is the first slider -->
+    <ion-slide style="background-color: #222">
+        <ion-icon name="contacts" style="zoom: 5.0;" color="primary"></ion-icon>
+        <h1 style="color: #641a30; font-family: TitanOne;">Wanna know about me?</h1>
+        <p style="font-family:Montserrat; font-size:18px; color:#86414c">Welcome to my CV!</p>
+    </ion-slide>
+
+    <!-- This is the second slider -->
+    <ion-slide style="background-color: #222">
+        <ion-icon name="laptop" style="zoom: 5.0;" color="primary"></ion-icon>
+        <h1 style="color: #641a30; font-family: TitanOne;">Studies and jobs</h1>
+        <p style="font-family:Montserrat; font-size:18px; color:#86414c">Here you can find all the information you're looking for</p>
+    </ion-slide>
+
+    <!-- This is the third slider -->
+    <ion-slide style="background-color: #222">
+        <ion-icon name="body" style="zoom: 5.0;" color="primary"></ion-icon>
+        <h1 style="color: #641a30; font-family: TitanOne;">Interests and competences</h1>
+        <p style="font-family:Montserrat; font-size:18px; color:#86414c">I will also let you know more personal things</p>
+    </ion-slide>
+
+    <!-- This is the fourth slider -->
+    <ion-slide style="background-color: #222">
+        <ion-icon name="chatboxes" style="zoom: 5.0;" color="primary"></ion-icon>
+        <h1 style="color: #641a30; font-family: TitanOne;">Contact me!</h1>
+        <p style="font-family:Montserrat; font-size:18px; color:#86414c">You can find all the contact information needed for that</p>
+    </ion-slide>
+
+    <!-- This is the fith - and last - slider -->
+    <ion-slide style="background-color: #222">
+        <h1 style="color: #641a30; font-family: TitanOne;">Want to have a look?</h1>
+        <!-- Button to continue -->
+        <div style="position: absolute; bottom: 120px; text-align: center; z-index: 1000; width: 100%; font-family: TitanOne;">
+            <button ion-button color="primary" [navPush]="nextPage" style="font-size: 18px; color: #222; font-family: TitanOne;" (click)="goToLogin()"> Let's start! </button>
+        </div>
+    </ion-slide>
+</ion-slides>

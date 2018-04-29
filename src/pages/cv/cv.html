@@ -1,14 +1,14 @@
 <!--
- *  App developed for the mid-term exam in "Introduction to Mobile App
+ *  App developed for the final exam in "Introduction to Mobile App
  *  Design and Development" course @Laurea.
  *  Author: Patricia Vera Hernández
  *  Student number: 1106727
 -->
 <ion-header>
-  <ion-navbar>
+  <ion-navbar color="primary">
     <ion-buttons start>
       <button ion-button menuToggle>
-        <ion-icon name="menu"></ion-icon>
+        <ion-icon color="dark" name="menu"></ion-icon>
       </button>
     </ion-buttons>
 
@@ -18,7 +18,7 @@
   <!--
     Segments dividing the page into three sections
   -->
-  <ion-toolbar>
+  <ion-toolbar color="primary-light2">
     <ion-segment [(ngModel)]="cv">
       <ion-segment-button value="studies">
         Studies
@@ -36,50 +36,50 @@
 </ion-header>
 
 
-<ion-content>
-  <div [ngSwitch]="cv">
+<ion-content style="background-color: #b1667c">
+  <div [ngSwitch]="cv" color="dark">
 
     <!--
       List of studies - cards with image and explanation text
     -->
-    <ion-list *ngSwitchCase="'studies'">
-      <ion-card>
-        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/c1/Logo_UPNA.svg/2000px-Logo_UPNA.svg.png">
+    <ion-list *ngSwitchCase="'studies'" color="dark">
+      <ion-card color="dark">
+        <img src="https://yt3.ggpht.com/a-/AJLlDp2-rBf8f6-w3uPtIyBbrWn73jjN6LqcjNBKUQ=s900-mo-c-c0xffffffff-rj-k-no">
         <ion-card-content>
-          <ion-card-title> Degree in Computer Science </ion-card-title>
-          <p> I studied in the Public University of Navarre and I specialized in Computing and Intelligent Systems. I started in 2014 and I will be finishing my studies this June, 2018. </p>
+          <ion-card-title style="color: #86414c"> Degree in Computer Science </ion-card-title>
+          <p class="description" style="color: #86414c"> I studied in the Public University of Navarre and I specialized in Computing and Intelligent Systems. I started in 2014 and I will be finishing my studies this June, 2018. </p>
         </ion-card-content>
       </ion-card>
 
-      <ion-card>
+      <ion-card color="dark">
         <img src="http://abc4eu.com/images/logos/laurea-logo-350x350.png">
         <ion-card-content>
-          <ion-card-title> Erasmus </ion-card-title>
-          <p> I spent my last semester of uni (January 2018 - June 2018) in Laurea University of Applied Sciences in Helsinki. This semester was mainly focused on Web Development with MEAN and App Design and Development. </p>
+          <ion-card-title style="color: #86414c"> Erasmus </ion-card-title>
+          <p class="description" style="color: #86414c"> I spent my last semester of uni (January 2018 - June 2018) in Laurea University of Applied Sciences in Helsinki. This semester was mainly focused on Web Development with MEAN and App Design and Development. </p>
         </ion-card-content>
       </ion-card>
 
-      <ion-card>
+      <ion-card color="dark">
         <img src="https://yt3.ggpht.com/-gQXMhrFNw1A/AAAAAAAAAAI/AAAAAAAAAAA/YRpLqLqPSdw/s900-c-k-no-mo-rj-c0xffffff/photo.jpg">
         <ion-card-content>
-          <ion-card-title> Photographic Composition </ion-card-title>
-          <p> I completed an online course about photographic composition a few years ago. </p>
+          <ion-card-title style="color: #86414c"> Photographic Composition </ion-card-title>
+          <p class="description" style="color: #86414c"> I completed an online course about photographic composition a few years ago. </p>
         </ion-card-content>
       </ion-card>
 
-      <ion-card>
-        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/c1/Logo_UPNA.svg/2000px-Logo_UPNA.svg.png">
+      <ion-card color="dark"> 
+        <img src="https://yt3.ggpht.com/a-/AJLlDp2-rBf8f6-w3uPtIyBbrWn73jjN6LqcjNBKUQ=s900-mo-c-c0xffffffff-rj-k-no">
         <ion-card-content>
-          <ion-card-title> Photography courses </ion-card-title>
-          <p> I completed two courses in Public University of Navarre about Photo-retouching with Photoshop and Management of Digital Cameras. </p>
+          <ion-card-title style="color: #86414c"> Photography courses </ion-card-title>
+          <p class="description" style="color: #86414c"> I completed two courses in Public University of Navarre about Photo-retouching with Photoshop and Management of Digital Cameras. </p>
         </ion-card-content>
       </ion-card>
 
-      <ion-card>
+      <ion-card color="dark">
         <img src="http://katiesbookblog.com/wp-content/uploads/sites/18/2014/07/Untitled-design-6.png">
         <ion-card-content>
-          <ion-card-title> My next moves </ion-card-title>
-          <p> I am planing on completing my studies with a Graphic and Web Design Master after I finish my degree studies. I am supposed to start this master in October 2018. </p>
+          <ion-card-title style="color: #86414c"> My next moves </ion-card-title>
+          <p class="description" style="color: #86414c"> I am planing on completing my studies with a Graphic and Web Design Master after I finish my degree studies. I am supposed to start this master in October 2018. </p>
         </ion-card-content>
       </ion-card>
     </ion-list>
@@ -88,27 +88,27 @@
       List of jobs - cards with image and explanation text
     -->
     <ion-list *ngSwitchCase="'jobs'">
-      <ion-card>
+      <ion-card color="dark">
         <img src="http://www.unavarra.es/digitalAssets/196/196604_100000logo_GEOACTIO.png">
         <ion-card-content>
-          <ion-card-title> GeoActio </ion-card-title>
-          <p> I've been part of this company as an intern during the first semester of my last year of uni. I participated in two projects, one of them held in Wordpress and about setting an online-shop in the web page, and the other one held on Joomla! and about HTML, CSS, PHP, JavaScript...</p>
+          <ion-card-title style="color: #86414c"> GeoActio </ion-card-title>
+          <p class="description" style="color: #86414c"> I've been part of this company as an intern during the first semester of my last year of uni. I participated in two projects, one of them held in Wordpress and about setting an online-shop in the web page, and the other one held on Joomla! and about HTML, CSS, PHP, JavaScript...</p>
         </ion-card-content>
       </ion-card>
 
-      <ion-card>
+      <ion-card color="dark">
         <img src="https://www.vectorlogo.es/wp-content/uploads/2015/09/logo-vector-el-corte-ingles.jpg">
         <ion-card-content>
-          <ion-card-title> El Corte Inglés </ion-card-title>
-          <p> I worked in this company in my hometown during summer 2017. I was a saleswoman working during the summer sales. </p>
+          <ion-card-title style="color: #86414c"> El Corte Inglés </ion-card-title>
+          <p class="description" style="color: #86414c"> I worked in this company in my hometown during summer 2017. I was a saleswoman working during the summer sales. </p>
         </ion-card-content>
       </ion-card>
 
-      <ion-card>
+      <ion-card color="dark">
         <img src="https://i.pinimg.com/originals/97/c5/02/97c5021ba31bf9728947f5f94a1ac688.png">
         <ion-card-content>
-          <ion-card-title> Stradivarius </ion-card-title>
-          <p> I worked in this company in my hometown a couple of weeks during summer 2017. I was a saleswoman working during summer sales. </p>
+          <ion-card-title style="color: #86414c"> Stradivarius </ion-card-title>
+          <p class="description" style="color: #86414c"> I worked in this company in my hometown a couple of weeks during summer 2017. I was a saleswoman working during summer sales. </p>
         </ion-card-content>
       </ion-card>
     </ion-list>
@@ -117,9 +117,9 @@
       List of official language knowledge - level specified
     -->
     <ion-list *ngSwitchCase="'languages'">
-      <ion-item> Spanish - mother tongue </ion-item>
-      <ion-item> English - B2 (EOI) </ion-item>
-      <ion-item> German - A2 (EOI) </ion-item>
+      <ion-item color="primary-light2" style="color: #222"> <b> Spanish - mother tongue </b> </ion-item>
+      <ion-item color="primary-light2" style="color: #222"> <b> English - B2 (EOI) </b> </ion-item>
+      <ion-item color="primary-light2" style="color: #222"> <b> German - A2 (EOI) </b> </ion-item>
     </ion-list>
 
   </div>

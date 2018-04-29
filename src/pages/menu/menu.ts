@@ -33,7 +33,7 @@ export class MenuPage {
 
   // Pages available
   pages: PageInterface[] = [
-    { title: "About", pageName: "TabsPage", tabComponent: "AboutPage", index: 0, icon: "home" },
+    { title: "My Profile", pageName: "TabsPage", tabComponent: "ProfilePage", index: 0, icon: "person" },
     { title: "My CV", pageName: "TabsPage", tabComponent: "CvPage", index: 1, icon: "bulb" },
     { title: "Project Work", pageName: "WorkPage", icon: "code-working" },
     { title: "Extra Activities", pageName: "ExtraPage", icon: "create" },

@@ -14,6 +14,7 @@ import { StatusBar } from '@ionic-native/status-bar';
 import { MyApp } from './app.component';
 import { MenuPage } from '../pages/menu/menu';
 import { LoginPage } from '../pages/login/login';
+import { WelcomePage } from '../pages/welcome/welcome';
 import { FirebaseProvider } from '../providers/firebase/firebase';
 
 // Angular firebase database imports
@@ -37,8 +38,8 @@ const firebaseConfig = {
 @NgModule({
   declarations: [
     MyApp,
-    LoginPage,
-    MenuPage
+    MenuPage,
+    WelcomePage,
   ],
   imports: [
     BrowserModule,
@@ -51,8 +52,8 @@ const firebaseConfig = {
   bootstrap: [IonicApp],
   entryComponents: [
     MyApp,
-    LoginPage,
-    MenuPage
+    MenuPage,
+    WelcomePage,
   ],
   providers: [
     StatusBar,

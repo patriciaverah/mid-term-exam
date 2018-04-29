@@ -1,3 +1,45 @@
+  /*
+   *  App developed for the final exam in "Introduction to Mobile App
+   *  Design and Development" course @Laurea.
+   *  Author: Patricia Vera Hernández
+   *  Student number: 1106727
+   */
+
 page-about {
+
+    // Fixing the page with no scroll
+    .no-scroll .scroll-content {
+        overflow: hidden;
+    }
+
+    .welcome-title {
+        font-family: TitanOne; 
+        font-size: 30px; 
+        text-align: center;
+        margin: auto;
+        color: #86414c;
+        margin: 10%;
+    }
+
+    .intromyself {
+        font-family: Montserrat;
+        font-size: 16px;
+        // text-align: center;
+        color: #86414c;
+    }
+
+    .introapp {
+        font-family: Montserrat;
+        font-size: 16px;
+        // text-align: center;
+        color: #86414c;
+    }
+
+    .introcontact {
+        font-family: Montserrat;
+        font-size: 16px;
+        // text-align: center;
+        color: #86414c;
+    }
 
 }
