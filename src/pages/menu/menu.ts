@@ -1,5 +1,5 @@
 /*
- *  App developed for the mid-term exam in "Introduction to Mobile App
+ *  App developed for the final exam in "Introduction to Mobile App
  *  Design and Development" course @Laurea.
  *  Author: Patricia Vera Hernández
  *  Student number: 1106727
@@ -79,14 +79,14 @@ export class MenuPage {
     }
   }
 
-  // Log out function -- not working!
+  // Log out function
   logoutClicked(){
     this.fire.auth.signOut()
     .then(data => {
       // user is logged out
       // we set login as root
-        //const root = this.app.getRootNavById('');
-        //root.popToRoot();
+      
+      this.navCtrl.push('LoginPage');
     })
     .catch(error => {
       // there has been an error, so we show it
